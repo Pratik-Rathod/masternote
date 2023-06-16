@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-s1x&7u&lpqrm1m_143zuw$!%8+qw9fs96)w5zxk2ala$97bw$o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'masters',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -67,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'masternote.wsgi.application'
+WSGI_APPLICATION = 'masternote.wsgi.app'
 
 
 # Database
