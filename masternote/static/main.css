@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#background{
+    position: absolute;
+    z-index: -1000;
+    height: 40vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.796);
+}
+
+
+nav {
+    /* position: fixed; */
+    padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50px;
+    /* width: 100%; */
+}
+
+nav>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.navbutton {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-radius: 50px;
+    background-color: rgba(37, 33, 70, 0.796);
+    transition: 500ms ease-in-out ;
+}
+.navbutton:hover{
+    background-color:rgba(55, 52, 75, 0.997) ;
+    transition: 200ms ease-in-out ;
+}
+.navbutton>a {
+    margin: 0 13px 0 13px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+#leftnav > .navbutton{  
+    background-color: rgba(48, 48, 48, 0.27); 
+    margin-left: 15px;
+    border-radius: 100%;
+}
+.navbutton>a>img {
+    display: flex;
+    z-index: -10;
+    align-items: center;    
+    height: 24px;
+    width: 24px;
+}

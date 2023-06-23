@@ -1,0 +1,24 @@
+{%load static%}
+<nav class="nav">
+    <div>
+        <div id="mastenote-lable" class="navbutton">
+            <img src="{%static 'note.svg'%}" style="margin-left: 13px;" height="34px" width="34px" alt="">
+            <a href="">
+                MasterNote
+            </a>
+        </div>
+    </div>
+    <div id="leftnav">
+        <div class="navbutton">
+            <a href="{%url 'login'%}">
+                <img src="{%static 'login2.svg'%}" title="login" alt="">
+            </a>
+        </div>
+        <div class="navbutton">
+            <a href="">
+                <img src="{%static 'github-mark/github-mark-white.svg'%}" alt="github" title="github">
+            </a>
+        </div> 
+    </div>
+</nav>
+

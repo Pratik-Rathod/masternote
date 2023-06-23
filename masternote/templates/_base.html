@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {%load static%}
+    <link rel="stylesheet" href="{%static 'main.css'%}">
+    <link rel="shortcut icon" href="{%static 'ico.png'%}" type="image/x-icon">
+    <title>Masternote</title>
+  </head>
+  <body>
+    <div id="background"></div>
+    {%include '_nav.html'%}
+    
+    {%block 'main' %}
+    
+    {%endblock%}    
+  </body>
+</html>
