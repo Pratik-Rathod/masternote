@@ -2,12 +2,26 @@
 
 {% block 'main' %}
 
-<div class="login-form" style="display: flex; align-self: center; justify-content: center; font-size: xx-large;">
-    <form action="login" method="post">
-        {{login}}
-        {% csrf_token %}
-        <!-- <input type="submit" value="login"> -->
-    </form>
+<div class="form-flex-container">
+    <div id="login-form-class">
+        <div id="greet">
+            Welcome back |🎉
+        </div>
+        <form class="login-form" action="login" method="post">
+            {{login.as_div}}
+            {% csrf_token %}
+            <input type="submit" value="Login">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <span{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</span>
+                    {% endfor %}
+            </div>
+            {% endif %}
+        </form>
+
+
+    </div>
 </div>
 
 {% endblock %}
