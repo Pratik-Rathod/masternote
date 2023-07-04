@@ -1,6 +1,6 @@
 from django.shortcuts import render,HttpResponse,redirect
 from django.contrib.auth.forms import AuthenticationForm,UserCreationForm
-from django.contrib.auth import login, logout,authenticate
+from django.contrib.auth import login,logout,authenticate
 from django.contrib import messages
 
 # Create your views here.
@@ -18,11 +18,21 @@ def userlogin(request):
       user  = authenticate(username=username,password=password)
       if user is not None:
          login(request,user)
+         messages.success(request, "Successful welcome back!")
          return redirect('home')
       else:
-         messages.error(request, "~Username or password was wrong")
+         messages.error(request, "Username or password was wrong")
          return redirect('login')
    else:    
       context['login'] = AuthenticationForm()
 
    return render(request,'masters/login.html',context)
+
+def userlogout(request):
+   logout(request)
+   messages.success(request, "See ya soon!")
+
+   return redirect('home')
+
+def user_register(request):
+   pass

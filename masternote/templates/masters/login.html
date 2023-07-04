@@ -11,16 +11,7 @@
             {{login.as_div}}
             {% csrf_token %}
             <input type="submit" value="Login">
-            {% if messages %}
-            <div class="messages">
-                {% for message in messages %}
-                <span{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</span>
-                    {% endfor %}
-            </div>
-            {% endif %}
         </form>
-
-
     </div>
 </div>
 

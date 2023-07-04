@@ -77,13 +77,14 @@ nav>div {
 .form-flex-container {
     display: flex;
     margin-top: 70px;
-    
+
     justify-content: center;
     justify-items: center;
     flex-direction: column;
     align-items: center;
 
 }
+
 
 
 #login-form-class {
@@ -101,7 +102,8 @@ nav>div {
 }
 
 .login-form {
-    padding: 25px;;
+    padding: 25px;
+    ;
 }
 
 .login-form div label {
@@ -140,8 +142,40 @@ input:focus {
     border: 1px solid rgba(84, 255, 115, 0.24);
 
 }
-.error{
-    font-size: smaller;
-    color: rgba(255, 0, 0, 0.519);
-    font-style: italic;
+
+
+
+.messages-container {
+    display: flex;
+    position: absolute;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+    left: 0;
+    right: 0;
+    margin-top: 4rem;
+    top: 0;
+    justify-content: center;
+
+}
+
+.message {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    max-width: 371px;
+}
+
+.success {
+    background-color: rgba(0, 255, 0, 0.182);
+    border: 1px solid green;
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.182);
+    border: 1px solid red;
 }

@@ -13,9 +13,12 @@
   <body>
     <div id="background"></div>
     {%include '_nav.html'%}
-    
+   
     {%block 'main' %}
     
     {%endblock%}    
+    {%include '__messages.html'%}
+  
+   <script src="{%static 'main.js'%}"></script>
   </body>
 </html>

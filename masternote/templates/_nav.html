@@ -10,9 +10,15 @@
     </div>
     <div id="leftnav">
         <div class="navbutton">
-            <a href="{%url 'login'%}">
-                <img src="{%static 'login2.svg'%}" title="login" alt="">
+            {% if user.is_authenticated  %}
+             <a href="{%url 'logout'%}">
+                <img src="{%static 'logout.svg'%}" title="logout" alt="logoutsvg">
             </a>
+            {% else %}
+             <a href="{%url 'login'%}">
+                <img src="{%static 'login2.svg'%}" title="login" alt="loginsvg">
+            </a>
+            {% endif %} 
         </div>
         <div class="navbutton">
             <a href="">
