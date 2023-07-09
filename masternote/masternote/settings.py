@@ -34,7 +34,6 @@ else:
     ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
-
 INSTALLED_APPS = [
     'masters',
     'django.contrib.admin',
@@ -78,7 +77,7 @@ WSGI_APPLICATION = 'masternote.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-if DEBUG:
+if not DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': os.environ.get('DBENGINE'),
