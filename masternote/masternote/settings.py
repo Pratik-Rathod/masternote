@@ -26,10 +26,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = str(os.environ.get('DEBUG')) == "1"  # 1 = true
 
-ALLOWED_HOSTS = ['127.0.0.1','.vercel.app']
+ALLOWED_HOSTS = None
 
-# if not DEBUG:
-#     ALLOWED_HOSTS += [os.environ.get('ALLOWED_HOST')]
+if not DEBUG:
+    ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS')]
+else:
+    ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
@@ -76,20 +78,17 @@ WSGI_APPLICATION = 'masternote.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
-
-DATABASES = {
-  'default': {
-    'ENGINE': os.environ.get('DBENGINE'),
-    'NAME': os.environ.get('DBNAME'),
-    'USER': os.environ.get('DBUSER'),
-    'PASSWORD': os.environ.get('DBPASSWORD'),
-    'HOST': os.environ.get('DBHOST'),
-    'PORT': os.environ.get('DBPORT'),
-  }
-}
-
-
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': os.environ.get('DBENGINE'),
+            'NAME': os.environ.get('DBNAME'),
+            'USER': os.environ.get('DBUSER'),
+            'PASSWORD': os.environ.get('DBPASSWORD'),
+            'HOST': os.environ.get('DBHOST'),
+            'PORT': os.environ.get('DBPORT'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
