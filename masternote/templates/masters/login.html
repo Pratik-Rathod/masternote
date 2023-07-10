@@ -3,14 +3,17 @@
 {% block 'main' %}
 
 <div class="form-flex-container">
-    <div id="login-form-class">
+    <div class="form-class">
         <div id="greet">
             Welcome back |🎉
         </div>
-        <form class="login-form" action="login" method="post">
+        <form class="form" action="{%url 'login'%}" method="post">
             {{login.as_div}}
             {% csrf_token %}
             <input type="submit" value="Login">
+            <div class="form-link">
+                not registered ? <a href="{%url 'register'%}">join us</a> 
+            </div>
         </form>
     </div>
 </div>

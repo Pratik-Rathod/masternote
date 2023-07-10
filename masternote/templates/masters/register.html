@@ -1,0 +1,19 @@
+{% extends '_base.html' %}
+{% block 'main' %}
+
+<div class="form-flex-container" id="register">
+    <div class="form-class">
+        <div id="greet">
+            Welcome User |🎉
+        </div>
+        <form class="form" action="{%url 'register'%}" method="post">
+            {% csrf_token %}
+            {{register_form.as_div}}
+         <input type="submit" value="Register">
+         <div class="form-link">
+            already registered ? <a href="{%url 'login'%}">login</a> 
+        </div> 
+        </form>
+     </div>
+</div>
+{% endblock %}

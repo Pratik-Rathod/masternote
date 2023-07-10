@@ -74,7 +74,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'masternote.wsgi.app'
 
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 if not DEBUG:
@@ -88,6 +93,7 @@ if not DEBUG:
             'PORT': os.environ.get('DBPORT'),
         }
     }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -127,7 +133,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

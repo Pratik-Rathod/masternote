@@ -3,28 +3,40 @@
     <div>
         <div id="mastenote-lable" class="navbutton">
             <img src="{%static 'img/note.svg'%}" style="margin-left: 13px;" height="34px" width="34px" alt="">
-            <a href="">
+            <a href="{%url 'home' %}">
                 MasterNote
             </a>
         </div>
     </div>
     <div id="leftnav">
         <div class="navbutton">
-            {% if user.is_authenticated  %}
-             <a href="{%url 'logout'%}">
+            <a href="">
+               {{user}} 
+            </a>
+        </div>
+       
+        <div class="navbutton">
+            <a href="{%url 'register'%}">
+                <img src="{%static 'img/signin1.svg'%}" title="signup" alt="signupsvg">
+            </a>
+        </div>
+
+        <div class="navbutton">
+            {% if user.is_authenticated %}
+            <a href="{%url 'logout'%}">
                 <img src="{%static 'img/logout.svg'%}" title="logout" alt="logoutsvg">
             </a>
+
             {% else %}
-             <a href="{%url 'login'%}">
+            <a href="{%url 'login'%}">
                 <img src="{%static 'img/login2.svg'%}" title="login" alt="loginsvg">
             </a>
-            {% endif %} 
+            {% endif %}
         </div>
         <div class="navbutton">
-            <a href="">
+            <a href="https://github.com/Pratik-Rathod/" target="_blank">
                 <img src="{%static 'img/github-mark/github-mark-white.svg'%}" alt="github" title="github">
             </a>
-        </div> 
+        </div>
     </div>
 </nav>
-
