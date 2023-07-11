@@ -1,42 +1,41 @@
 {%load static%}
 <nav class="nav">
-    <div>
-        <div id="mastenote-lable" class="navbutton">
-            <img src="{%static 'img/note.svg'%}" style="margin-left: 13px;" height="34px" width="34px" alt="">
-            <a href="{%url 'home' %}">
-                MasterNote
-            </a>
-        </div>
+    <div id="mastenote-lable" class="navbutton">
+        <img src="{%static 'img/note.svg'%}" style="margin-left: 13px;" height="34px" width="34px" alt="">
+        <a href="{%url 'home' %}">
+            MasterNote
+        </a>
     </div>
-    <div id="leftnav">
-        <div class="navbutton">
-            <a href="">
-               {{user}} 
-            </a>
-        </div>
-       
-        <div class="navbutton">
-            <a href="{%url 'register'%}">
-                <img src="{%static 'img/signin1.svg'%}" title="signup" alt="signupsvg">
-            </a>
-        </div>
 
-        <div class="navbutton">
-            {% if user.is_authenticated %}
-            <a href="{%url 'logout'%}">
-                <img src="{%static 'img/logout.svg'%}" title="logout" alt="logoutsvg">
-            </a>
+    {% if user.is_authenticated %}
+    <div class="navbutton">
+        <a href="">
+            {{user}}
+        </a>
+    </div>
+    <div class="navbutton">
+        <a href="{%url 'logout'%}">
+            <img src="{%static 'img/logout.svg'%}" title="logout" alt="logoutsvg"> 
+        </a>
+    </div>
 
-            {% else %}
-            <a href="{%url 'login'%}">
-                <img src="{%static 'img/login2.svg'%}" title="login" alt="loginsvg">
-            </a>
-            {% endif %}
-        </div>
-        <div class="navbutton">
-            <a href="https://github.com/Pratik-Rathod/" target="_blank">
-                <img src="{%static 'img/github-mark/github-mark-white.svg'%}" alt="github" title="github">
-            </a>
-        </div>
+    {% else %}
+
+    <div class="navbutton">
+        <a href="{%url 'register'%}">
+            <img src="{%static 'img/signin1.svg'%}" title="signup" alt="signupsvg">
+        </a>
+    </div>
+
+    <div class="navbutton">
+        <a href="{%url 'login'%}">
+            <img src="{%static 'img/login2.svg'%}" title="login" alt="loginsvg">
+        </a>
+    </div>
+    {% endif %}
+    <div class="navbutton">
+        <a href="https://github.com/Pratik-Rathod/" target="_blank">
+            <img src="{%static 'img/github-mark/github-mark-white.svg'%}" alt="github" title="github">
+        </a>
     </div>
 </nav>
