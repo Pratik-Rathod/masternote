@@ -3,6 +3,25 @@
 
 
 window.onload = function () {
+    const is_private = document.getElementById('id_is_private');
+    const publish_button = document.getElementById('publish');
+
+    if (is_private) {
+
+        if (is_private.checked) {
+            publish_button.innerHTML = "Save";
+        } else {
+            publish_button.innerHTML = "Publish";
+        }
+        
+        is_private.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                publish_button.innerHTML = "Save";
+            } else {
+                publish_button.innerHTML = "Publish";
+            }
+        })
+    }
 
     let option = {
         linkify: true,
@@ -40,7 +59,7 @@ window.onload = function () {
 
     let _editor_panel = document.getElementById('note-editor');
     let _preview_panel = document.getElementById('note-preview-container');
-  
+
     change_view.forEach(element => {
         element.addEventListener('change', () => {
             if (element.value == '0') {

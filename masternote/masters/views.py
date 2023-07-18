@@ -7,8 +7,8 @@ from django.forms import ValidationError
 # Create your views here.
 
 
-def home(request):
-    return render(request, 'index.html')
+# def home(request):
+#     return render(request, 'index.html')
 
 
 def user_login(request):

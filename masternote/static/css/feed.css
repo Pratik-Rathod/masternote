@@ -1,0 +1,49 @@
+.note-container {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+}
+
+.note-container .note-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.note-container .note-list .note-card {
+    background-color: rgb(19, 20, 34);
+    display: flex;
+    gap: 15px;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.note-container .note-list .note-card:hover>.note-header {
+    color: rgb(207, 201, 247);
+}
+
+
+.note-container .note-list .note-card:hover {
+    background-color: rgb(27, 25, 40);
+}
+.note-container .note-list .note-card .note-header {
+    font-weight: bold;
+    font-size: large;
+}
+
+.note-container .note-list .note-card .note-footer {
+    display: flex;
+}
+.note-container .note-list .note-card .note-footer .read-more a{
+    text-decoration: none;
+    color: rgb(103, 139, 139);
+}
+
+.note-container .note-list .note-card .note-footer .note-auther {
+    margin-left: auto;
+}

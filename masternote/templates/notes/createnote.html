@@ -2,31 +2,46 @@
 {% block 'main' %}
 <div class="main-note-cotainer">
     <form action="" method="post" class="note-new-note-container">
-        <div class="note-editor-header">
+        <div class="note-meta-data-header">
             <div class="title">
+                <label for="id_title">Blog title</label><br>
+                {% csrf_token %}
                 {{form.title}}
+
             </div>
+            <div class="title">
+                <label for="id_summary">Summary</label><br>
+                {{form.summary}}
+            </div>
+            <div class="note-editor-header">
+                <div class="header-into">
+                    <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+                </div>
 
-            <div class="editor-preview">
-                {%load static%}
-                <div class="view-pref">
-                    <label>
-                        <input type="radio" name="changeview" value="0">
-                        <img src="{%static 'img/code-panel.svg' %}" height="22px" width="22px" alt="" srcset="">
+                <div class="editor-preview">
+                    {%load static%}
+                    <div class="view-pref">
+        
+                        <label>
+                            <input type="radio" name="changeview" value="0">
+                            <img src="{%static 'img/code-panel.svg' %}" height="22px" width="22px" title="Only Editor" alt="Only Editor" srcset="">
 
-                    </label>
-                    <label>
-                        <input type="radio" checked="checked" name="changeview" value="1">
-                        <img src="{%static 'img/split.svg' %}" height="22px" width="22px" alt="" srcset="">
+                        </label>
+                        <label>
+                            <input type="radio" checked="checked" name="changeview" value="1">
+                            <img src="{%static 'img/split.svg' %}" height="22px" width="22px"  title="Split editor"  alt="Split editor" srcset="">
 
-                    </label>
-                    <label>
-                        <input type="radio" name="changeview" value="2">
-                        <img src="{%static 'img/preview.svg' %}" height="22px" width="22px" alt="" srcset="">
-                    </label>
+                        </label>
+                        <label>
+                            <input type="radio" name="changeview" value="2">
+                            <img src="{%static 'img/preview.svg' %}" height="22px" width="22px" alt="Preview panel"  title="Preview panel" srcset="">
+                        </label>
+                    </div>
                 </div>
             </div>
+
         </div>
+
         <div class="note-editor-container">
             <div id="note-editor" class="note-editor">{{form.body}}</div>
             <div class="note-preview-container" id="note-preview-container">
@@ -34,12 +49,22 @@
                 </div>
             </div>
         </div>
-        {% csrf_token %}
+       
         <div class="publish">
+            <div>
+                Make it private ?{{form.is_private}}
+            </div>
             <button id="publish" type="submit">Publish </button>
         </div>
-        
     </form>
 </div>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 {% endblock %}

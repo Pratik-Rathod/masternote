@@ -1,12 +1,35 @@
 {%extends '_base.html'%}
 {%block 'main'%}
 
-{% if user.is_authenticated  %}
-    <div class="create-new-post">
-        <a href="{%url 'new-note' %}">
-            Add new post
-        </a>
-    </div>  
+{% if user.is_authenticated %}
+
+<div class="note-container">
+    <div class="headline">
+        <h1> | Latest notes</h1>
+    </div>
+    <div class="note-list">
+        {% if notes %}
+        {% for note in notes %}
+        <div class="note-card">
+            <div class="note-header">{{note.title}}</div>
+            <div class="note-summary-body">{{note.summary}}</div>
+            <div class="note-footer">
+                <div class="read-more"><a href="{%url 'post' post_id=note.id%}">Read more</a></div>
+                <div class="note-auther">{{note.author__username}}</div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h1>No post avaible !</h1>
+        {% endif %}
+    </div>
+</div>
+
+<div id="id-create-new-post" class="create-new-post">
+    <a href="{%url 'new-note' %}">
+        Add Post
+    </a>
+</div>
 {%else%}
 <div class="welcome-container">
     <div class="welcome-text">

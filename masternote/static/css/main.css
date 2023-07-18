@@ -292,17 +292,23 @@ input:focus {
 
 /* post */
 .create-new-post {
-    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
     margin-top: 10px;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
     font-weight: bold;
-}
-.create-new-post a {
-    border-radius: 5px 20px 5px 20px;
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px 10px 20px;
-    border: 2px solid rgb(0, 81, 255);
+    font-size: medium;
+    padding: 10px;
     background-color: rgba(0, 65, 206, 0.281);
-    box-shadow: 5px 5px 10px rgba(0, 61, 231, 0.507);
+    border: 2px solid rgb(0, 81, 255);
+    border-radius: 5px 20px 5px 20px;
+
 }
 
+.create-new-post a {
+    text-decoration: none;  
+    color: white;
+      /* box-shadow: 5px 5px 10px rgba(0, 61, 231, 0.507); */
+}
