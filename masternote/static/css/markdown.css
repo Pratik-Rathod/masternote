@@ -1,0 +1,137 @@
+.main-note-cotainer {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    height: 80vh;
+}
+
+.note-new-note-container {
+    display: flex;
+    row-gap: 20px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.note-editor-header {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    justify-content: center;
+    gap: 10px 20px; 
+}
+
+.note-editor-header .title {
+    flex-grow: 1;
+    max-width: 400px;
+}
+
+.note-editor-header .publish {
+    height: auto;
+    left: 0;
+}
+
+.note-editor-header .title{
+    flex-basis: 200px;
+}
+
+#id_title {
+    border: none;
+    outline: none;
+    background-color: rgba(26, 69, 95, 0.412);
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    padding-left: 17px;
+    color: white;
+    font-size: large;
+}
+
+.note-editor-header .editor-preview{
+    margin-left: auto;
+}
+
+/* .note-editor-header #id_title:focus {
+    background-color: rgba(247, 247, 247, 0.097);
+} */
+
+.publish{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+.publish button {
+    outline: 0;
+    padding: 10px 15px 10px 15px;
+    background-color: rgba(26, 68, 95, 0.605);
+    border: 0;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    height: 100%;
+}
+
+
+.note-editor-container {
+    display: flex;
+    gap: 10px 20px;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+.note-editor-container div {
+    border-radius: 4px;
+}
+
+.note-editor {
+    flex-grow: 1;
+    flex-basis: 400px;
+    max-width: 1200px;
+}
+
+.note-preview-container {
+    max-width: 1200px;
+    background-color: rgb(46, 46, 46);
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
+.note-preview-container .note-preview {
+    margin: 10px;
+}
+
+.note-editor textarea {
+    height: 100%;
+    width: 100%;
+    resize: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(31, 31, 31);
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+
+.view-pref input[name='changeview']{
+   display: none;
+}
+
+
+.view-pref input[name='changeview'] + img{
+    cursor: pointer;
+    background-color: rgba(16, 23, 55, 0.423);
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.view-pref input[name='changeview'] + img:hover{
+    background-color: rgba(85, 144, 255, 0.307);
+}
+ 
+
+.view-pref input[name='changeview']:checked + img{
+    background-color: rgba(85, 144, 255, 0.615);
+}

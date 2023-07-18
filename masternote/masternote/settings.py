@@ -36,6 +36,7 @@ else:
 # Application definition
 INSTALLED_APPS = [
     'masters',
+    'notes',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -94,6 +95,9 @@ if not DEBUG:
         }
     }
 
+
+
+AUTH_USER_MODEL = 'auth.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

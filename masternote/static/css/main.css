@@ -2,7 +2,7 @@
 
 :root {
     font-family: 'Open Sans', sans-serif;
-    background-color: #111;
+    background-color: #131313;
     color: white;
 }
 
@@ -14,7 +14,7 @@ body {
 #background {
     position: absolute;
     z-index: -1000;
-    height: 40vh;
+    height: 30vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.796);
 }
@@ -71,25 +71,7 @@ nav {
     width: 24px;
 }
 
-.form-link {
-    font-size: smaller;
-    font-style: italic;
-    color: #363636;
-    margin-top: 7px;
-    text-decoration: none;
-}
-
-.form-link a {
-    text-decoration: none;
-    color: #545454;
-}
-
-.form-link a:hover {
-    text-decoration: underline;
-    color: #787878;
-}
-
-
+/* forms  */
 
 .form-flex-container {
     display: flex;
@@ -109,6 +91,25 @@ nav {
     background-color: #191919;
     border-radius: 10px;
 }
+
+.form-link {
+    font-size: smaller;
+    font-style: italic;
+    color: #363636;
+    margin-top: 7px;
+    text-decoration: none;
+}
+
+.form-link a {
+    text-decoration: none;
+    color: #545454;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+    color: #787878;
+}
+
 
 #greet {
     font-size: 2.5rem;
@@ -246,3 +247,62 @@ input:focus {
     background-color: rgba(0, 26, 255, 0.3);
     border: 1px solid rgba(0, 102, 255, 0.984);
 }
+
+/* Product page */
+
+.welcome-container {
+    display: flex;
+    margin-left: 10vw;
+    flex-direction: column;
+    margin-top: 25vh;
+}
+
+.welcome-text-heading {
+    font-size: xx-large;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.welcome-text-subheading {
+    color: #898989;
+    font-style: italic;
+}
+
+.welcome-container .join-us {
+    margin-top: 7vh;
+}
+
+.welcome-container .join-us a {
+    border: 2px solid rgb(0, 81, 255);
+    border-radius: 0 20px 0 20px;
+    color: white;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 40px 10px 40px;
+    background-color: rgba(0, 65, 206, 0.281);
+    box-shadow: 5px 5px 10px rgba(0, 61, 231, 0.507);
+    outline: none;
+    font-size: large;
+}
+
+
+
+
+/* post */
+.create-new-post {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.create-new-post a {
+    border-radius: 5px 20px 5px 20px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid rgb(0, 81, 255);
+    background-color: rgba(0, 65, 206, 0.281);
+    box-shadow: 5px 5px 10px rgba(0, 61, 231, 0.507);
+}
+

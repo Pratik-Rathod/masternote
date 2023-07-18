@@ -8,6 +8,12 @@
     </div>
 
     {% if user.is_authenticated %}
+    <!-- <div class="navbutton">
+        <a href="">
+
+        </a>
+    </div> -->
+
     <div class="navbutton">
         <a href="">
             {{user}}
@@ -20,12 +26,12 @@
     </div>
 
     {% else %}
-
+<!-- 
     <div class="navbutton">
         <a href="{%url 'register'%}">
             <img src="{%static 'img/signin1.svg'%}" title="signup" alt="signupsvg">
         </a>
-    </div>
+    </div> -->
 
     <div class="navbutton">
         <a href="{%url 'login'%}">
