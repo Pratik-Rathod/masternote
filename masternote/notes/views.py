@@ -12,16 +12,19 @@ def viewpost(request, post_id):
     template = 'notes/view_note.html'
     context = dict()
     try:
+        
         #{"breaks": True, "typographer": True, 'html': False,'xhtmlOut': False, }
         md = MarkdownIt("js-default")
-        print(md.options)
-        post_body = NotesModel.objects.filter(id=post_id).values('body')
+        # print(md.options)
+        post_body = NotesModel.objects.filter(id=post_id).values('body','title','last_edit','author__username',)   
+        # print(post_body[0]['body'])
         htm = md.render(post_body[0]['body'])
-
+   
     except Exception as e:
         pass
 
     context['htm_body'] = htm
+    context['post_meta'] = post_body
 
     return render(request, template, context)
 

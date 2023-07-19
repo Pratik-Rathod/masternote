@@ -1,8 +1,23 @@
 {% extends '_base.html' %}
 {% block 'main' %}
-<div class="note-container">
-    <div class="">
-        {{htm_body|safe}}
+<div class="view-note-container">
+    <div class="view-body">
+        <div class="header">
+            {{post_meta.0.title}}
+        </div>
+        <div class="body">
+            {{htm_body|safe}}
+        </div>
+        <div class="footer">
+            <div>
+                <em> {{post_meta.0.last_edit}}</em>   
+            </div>
+
+            <div>
+                {{post_meta.0.author__username}} ✒️
+            </div>
+            
+        </div>
     </div>
 </div>
 {% endblock %}
