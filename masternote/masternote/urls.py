@@ -24,5 +24,5 @@ urlpatterns = [
     path('', include('notes.urls')),
 ]
 
-if DEBUG:
-    urlpatterns += [path('admin/', admin.site.urls),]
+# if DEBUG:
+urlpatterns += [path('jafaadmin/', admin.site.urls),]
