@@ -21,16 +21,10 @@
     background-color: #0d1117;
     padding: 1px 7px 5px 7px;
     border-radius: 4px;
-}
-
-.markdown-render>table {
-    width: 100%;
-   
-    /* table-layout: fixed; */
+    overflow-x: auto;
 }
 
 .markdown-render>table tr th {
-    /* white-space: nowrap; */
     word-wrap: break-all;
     background-color: rgb(97, 99, 114);
     padding: 2px;

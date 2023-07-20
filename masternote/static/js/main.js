@@ -3,7 +3,26 @@
 
 
 window.onload = function () {
+
     
+    fix_code_problem();
+    window.onresize = fix_code_problem;
+    
+    // Responsive code block
+    function fix_code_problem() {
+        let precode = document.querySelectorAll(".markdown-render .highlight")
+        precode_arr = Array.from(precode)
+      
+        precode_arr.forEach(element => {
+            const widthPercentage = 92;
+            const parentWidth = element.parentElement.offsetWidth;
+            const childWidth = (parentWidth * widthPercentage) / 100;
+            element.style.width = childWidth + 'px';
+
+        });
+    }
+
+
     // Editor Functions
     try {
         publish_button()
