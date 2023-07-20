@@ -255,6 +255,7 @@ input:focus {
     margin-left: 10vw;
     flex-direction: column;
     margin-top: 25vh;
+    height: 50vh;
 }
 
 .welcome-text-heading {

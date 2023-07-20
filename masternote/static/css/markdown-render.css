@@ -1,0 +1,46 @@
+.markdown-render p>img {
+    max-width: 40%;
+}
+
+.markdown-render h1,
+.markdown-render h2,
+.markdown-render h3,
+.markdown-render h4,
+.markdown-render h5,
+.markdown-render h6 {
+    color: rgb(223, 237, 255);
+}
+
+.markdown-render code {
+    color: rgb(185, 193, 255);
+    border-radius: 5px;
+    background-color: rgba(122, 122, 122, 0.311);
+}
+
+.markdown-render code .highlight {
+    background-color: #0d1117;
+    padding: 1px 7px 5px 7px;
+    border-radius: 4px;
+}
+
+.markdown-render>table {
+    width: 100%;
+   
+    /* table-layout: fixed; */
+}
+
+.markdown-render>table tr th {
+    /* white-space: nowrap; */
+    word-wrap: break-all;
+    background-color: rgb(97, 99, 114);
+    padding: 2px;
+}
+
+.markdown-render>table tr td {
+    word-wrap: break-all;
+    padding: 7px;
+}
+
+.markdown-render>table tr:nth-child(even) {
+    background-color: rgba(53, 55, 95, 0.364);
+}

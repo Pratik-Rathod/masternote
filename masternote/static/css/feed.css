@@ -75,7 +75,9 @@
     font-weight: bold;
 }
 
-.view-note-container .view-body .footer {
+.view-note-container .view-body .view-note-footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: flex-end;
 }

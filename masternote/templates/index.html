@@ -2,6 +2,24 @@
 {%block 'main'%}
 
 {% if user.is_authenticated %}
+<div id="id-create-new-post" class="create-new-post">
+    <a href="{%url 'new-note' %}">
+        Add Post
+    </a>
+</div>
+{%else%}
+<div class="welcome-container">
+    <div class="welcome-text">
+        <div class="welcome-text-heading">Welcome to MasteNotes!</div>
+        <div class="welcome-text-subheading">Discover the Joy of Simple text blogging and Share Your Thoughts with the
+            World</div>
+    </div>
+    <div class="join-us">
+        <a href="{%url 'register'%}">Register</a>
+    </div>
+</div>
+
+{% endif %}
 
 <div class="note-container">
     <div class="headline">
@@ -24,25 +42,6 @@
         {% endif %}
     </div>
 </div>
-
-<div id="id-create-new-post" class="create-new-post">
-    <a href="{%url 'new-note' %}">
-        Add Post
-    </a>
-</div>
-{%else%}
-<div class="welcome-container">
-    <div class="welcome-text">
-        <div class="welcome-text-heading">Welcome to MasteNotes!</div>
-        <div class="welcome-text-subheading">Discover the Joy of Simple text blogging and Share Your Thoughts with the
-            World</div>
-    </div>
-    <div class="join-us">
-        <a href="{%url 'register'%}">Register</a>
-    </div>
-</div>
-
-{% endif %}
 
 
 {%endblock%}

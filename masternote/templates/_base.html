@@ -8,8 +8,11 @@
 
   {%load static%}
   <link rel="stylesheet" href="{%static 'css/main.css'%}">
+
+  <link rel="stylesheet" href="{%static 'css/markdown-render.css'%}">
   <link rel="stylesheet" href="{%static 'css/feed.css'%}">
-  <link rel="stylesheet" href="{%static 'css/markdown.css'%}">
+  <link rel="stylesheet" href="{%static 'css/markdown-editor.css'%}">
+  <link rel="stylesheet" href="{%static 'css/highlight.css'%}">
   <link rel="stylesheet" href="{%static 'css/responsive.css'%}">
   <link rel="shortcut icon" href="{%static 'img/ico.png'%}" type="image/x-icon">
   <title>Masternote</title>
@@ -20,7 +23,7 @@
   <header>
     {%include '_nav.html'%}
   </header>
-  
+
   {%include '__messages.html'%}
 
   <main>
@@ -28,10 +31,16 @@
 
     {%endblock%}
   </main>
-<script src="{%static 'js/main.js'%}"></script>
-<!-- <script src="{%static 'js/markdown.editor.js'%}"></script> -->
-<br>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js" integrity="sha512-SYfDUYPg5xspsG6OOpXU366G8SZsdHOhqk/icdrYJ2E/WKZxPxze7d2HD3AyXpT7U22PZ5y74xRpqZ6A2bJ+kQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="{%static 'js/main.js'%}"></script>
+  <script src="{%static 'js/markdown.editor.js'%}"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/13.0.1/markdown-it.min.js"
+    integrity="sha512-SYfDUYPg5xspsG6OOpXU366G8SZsdHOhqk/icdrYJ2E/WKZxPxze7d2HD3AyXpT7U22PZ5y74xRpqZ6A2bJ+kQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/markdown-it-emoji/dist/markdown-it-emoji.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it-anchor@8.6.7/dist/markdownItAnchor.umd.min.js"></script> -->
+
 </body>
 
 </html>
